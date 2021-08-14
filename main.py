@@ -18,7 +18,6 @@ def getData(url):
 
 
 if __name__ == "__main__":
-    while True:
         url = "https://www.mohfw.gov.in/data/datanew.json"
         data = requests.get(url).json()
 
@@ -41,5 +40,4 @@ if __name__ == "__main__":
         nTitle = "Cases of Covid-19"
         nText = f"State : {v[0]}\nActive : {v[1]}\nCured : {v[2]}\nDeath : {v[3]}"
         notifyMe(nTitle, nText)
-# If we want to being notified, uncomment this below line
-# time.sleep(3600)
+
